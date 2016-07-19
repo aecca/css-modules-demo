@@ -1,0 +1,17 @@
+.box {
+  border:1px solid #ccc;
+  width: 300px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.header {
+  composes: title from './shared/typography.css';
+  background-color: #fff;
+  padding: 3px;
+}
+
+.body {
+  background-color: #fafafa;
+  padding: 3px;
+}

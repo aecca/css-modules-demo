@@ -1,10 +1,16 @@
-import styles from './buttons.css';
+import buttons from './buttons.css';
+import styles  from './styles.css';
 
 
 const html = `
-<button class='${styles.button}'>Default</button>
-<button class='${styles.danger}'>Submit</button>
-<button class='${styles.warning}'>Warning</button>
-`; 
+ <div class='${styles.box}'>
+   <div class='${styles.header}'>Titulo Bloque</div>
+   <div class='${styles.body}'>
+      <button class='${buttons.default}'>Default</button>
+      <button class='${buttons.danger}'>Submit</button>
+      <button class='${buttons.warning}'>Warning</button>
+   </div>
+</div>
+`;
 
 document.write(html);

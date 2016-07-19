@@ -50,9 +50,13 @@
 
 	var _buttons2 = _interopRequireDefault(_buttons);
 
+	var _styles = __webpack_require__(10);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var html = '\n<button class=\'' + _buttons2.default.button + '\'>Default</button>\n<button class=\'' + _buttons2.default.danger + '\'>Submit</button>\n<button class=\'' + _buttons2.default.warning + '\'>Warning</button>\n';
+	var html = '\n <div class=\'' + _styles2.default.box + '\'>\n   <div class=\'' + _styles2.default.header + '\'>Titulo Bloque</div>\n   <div class=\'' + _styles2.default.body + '\'>\n      <button class=\'' + _buttons2.default.default + '\'>Default</button>\n      <button class=\'' + _buttons2.default.danger + '\'>Submit</button>\n      <button class=\'' + _buttons2.default.warning + '\'>Warning</button>\n   </div>\n</div>\n';
 
 	document.write(html);
 
@@ -95,14 +99,14 @@
 	exports.i(__webpack_require__(8), undefined);
 
 	// module
-	exports.push([module.id, ".buttons__button {\n\tborder-radius: 5px;\n}\n\n.buttons__danger {\n\tbackground-color:red;\n}\n\n.buttons__warning {\n\tbackground-color:orange;\n}\n\n\n.buttons__success {\n\tbackground-color:green;\n}\n\n", ""]);
+	exports.push([module.id, ".buttons__default {\n\tborder-radius: 5px;\n}\n\n.buttons__danger {\n\tbackground-color:red;\n}\n\n.buttons__warning {\n\tbackground-color:orange;\n}\n\n\n.buttons__success {\n\tbackground-color:green;\n}\n\n", ""]);
 
 	// exports
 	exports.locals = {
-		"button": "buttons__button " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + "",
-		"danger": "buttons__danger buttons__button " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + "",
-		"warning": "buttons__warning buttons__button " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + "",
-		"success": "buttons__success buttons__button " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + ""
+		"default": "buttons__default " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + "",
+		"danger": "buttons__danger buttons__default " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + "",
+		"warning": "buttons__warning buttons__default " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + "",
+		"success": "buttons__success buttons__default " + __webpack_require__(4).locals["default"] + " " + __webpack_require__(5).locals["medium"] + " " + __webpack_require__(6).locals["arial"] + " " + __webpack_require__(7).locals["padding-all-medium"] + " " + __webpack_require__(8).locals["light-shadow"] + " " + __webpack_require__(4).locals["light"] + ""
 	};
 
 /***/ },
@@ -191,14 +195,15 @@
 
 
 	// module
-	exports.push([module.id, ".typography__large {\n\tfont-size: 22pt;\n}\n\n.typography__medium{\n\tfont-size: 18pt;\n}\n\n.typography__small {\n\tfont-size: 12pt;\n}\n\n.typography__xsmall {\n\tfont-size: 9pt;\n}\n", ""]);
+	exports.push([module.id, ".typography__large {\n\tfont-size: 22pt;\n}\n\n.typography__medium{\n\tfont-size: 18pt;\n}\n\n.typography__small {\n\tfont-size: 12pt;\n}\n\n.typography__xsmall {\n\tfont-size: 9pt;\n}\n\n.typography__title {\n  font-size: 16pt;\n}\n", ""]);
 
 	// exports
 	exports.locals = {
 		"large": "typography__large",
 		"medium": "typography__medium",
 		"small": "typography__small",
-		"xsmall": "typography__xsmall"
+		"xsmall": "typography__xsmall",
+		"title": "typography__title"
 	};
 
 /***/ },
@@ -504,6 +509,50 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(11);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]!./styles.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]!./styles.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	exports.i(__webpack_require__(5), undefined);
+
+	// module
+	exports.push([module.id, ".styles__box {\n  border:1px solid #ccc;\n  width: 300px;\n  margin: 2px;\n  padding: 2px;\n}\n\n.styles__header {\n  background-color: #fff;\n  padding: 3px;\n}\n\n.styles__body {\n  background-color: #fafafa;\n  padding: 3px;\n}", ""]);
+
+	// exports
+	exports.locals = {
+		"box": "styles__box",
+		"header": "styles__header " + __webpack_require__(5).locals["title"] + "",
+		"body": "styles__body"
+	};
 
 /***/ }
 /******/ ]);

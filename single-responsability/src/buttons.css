@@ -1,4 +1,4 @@
-.button {
+.default {
 	composes: default from './shared/colors.css';
 	composes: medium from './shared/typography.css';
 	composes: arial from './shared/fonts.css';
@@ -8,20 +8,20 @@
 }
 
 .danger {
-	composes: button;
+	composes: default;
 	composes: light from './shared/colors.css';
 	background-color:red;
 }
 
 .warning {
-	composes: button;
+	composes: default;
 	composes: light from './shared/colors.css';
 	background-color:orange;
 }
 
 
 .success {
-	composes: button;
+	composes: default;
 	composes: light from './shared/colors.css';
 	background-color:green;
 }
