@@ -1,0 +1,28 @@
+.button {
+	composes: default from './shared/colors.css';
+	composes: medium from './shared/typography.css';
+	composes: arial from './shared/fonts.css';
+	composes: padding-all-medium from './shared/layout.css';
+	composes: light-shadow from './shared/effect.css';
+	border-radius: 5px;
+}
+
+.danger {
+	composes: button;
+	composes: light from './shared/colors.css';
+	background-color:red;
+}
+
+.warning {
+	composes: button;
+	composes: light from './shared/colors.css';
+	background-color:orange;
+}
+
+
+.success {
+	composes: button;
+	composes: light from './shared/colors.css';
+	background-color:green;
+}
+

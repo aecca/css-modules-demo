@@ -1,0 +1,27 @@
+.button {
+   background-color: #ddd;
+   font-size: 12px;
+   font-weight: bold;
+   border-radius: 5px;
+   box-shadow: 2px 2px #fafafa;
+}
+
+.danger {
+	composes: button;
+	composes: light from './colors.css';
+	background-color:red;
+}
+
+.warning {
+	composes: button;
+	composes: light from './colors.css';
+	background-color:orange;
+}
+
+
+.success {
+	composes: button;
+	composes: light from './colors.css';
+	background-color:green;
+}
+

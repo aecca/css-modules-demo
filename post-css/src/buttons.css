@@ -1,0 +1,34 @@
+@value colors:  "./shared/colors.css";
+@value primary, light, red, blue, orange, green from colors;
+
+@value medium, large 	  from "./shared/typography.css";
+@value light-shadow  	  from "./shared/effect.css"; 
+@value padding-all-medium from "./shared/layout.css";
+
+.button {
+	color: primary;
+	border-radius: 5px;
+	box-shadow: light-shadow;
+	padding: padding-all-medium;
+	font-size: medium;
+}
+
+.danger {
+	composes: button;
+	color: light;
+	background-color:red;
+}
+
+.warning {
+	composes: button;
+	color: light;
+	background-color:orange;
+}
+
+
+.success {
+	composes: button;
+	color:light;
+	background-color:green;
+}
+

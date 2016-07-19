@@ -1,0 +1,27 @@
+/*@value blue: #0c77f8;
+@value red: #ff0000;
+@value green: #aaf200;*/
+.buttons__button___F1HcM {
+	color: #ccc;
+	border-radius: 5px;
+	box-shadow: 4px 4px 2px #fafafa;
+	padding: 2px 4px;
+	font-size: 18pt;
+}
+
+.buttons__danger___3GJX_ {
+	color: #fff;
+	background-color:#b53c3c;
+}
+
+.buttons__warning___3AUQx {
+	color: #fff;
+	background-color:#ec810b;
+}
+
+
+.buttons__success___Rf6fb {
+	color:#fff;
+	background-color:#aaf200;
+}
+
